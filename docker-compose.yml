@@ -1,0 +1,17 @@
+# Test studio 3T in container
+version: '3.5'
+services:
+  s3t: 
+    image: studio-3t-me
+    build: 
+      context: ./
+      args: 
+        user: ${USER}
+        uid: ${UID}
+        gid: ${GID}
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      -  .3T:/home/${USER}/.3T:ro
+    network_mode: "host" 
+    # entrypoint: sleep infinity
