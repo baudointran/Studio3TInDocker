@@ -12,6 +12,6 @@ services:
     environment:
       - DISPLAY=${DISPLAY}
     volumes:
-      -  .3T:/home/${USER}/.3T:ro
+      -  .3T:/home/${USER}/.3T
     network_mode: "host" 
     # entrypoint: sleep infinity
