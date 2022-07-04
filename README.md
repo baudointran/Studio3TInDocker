@@ -10,8 +10,14 @@ Docker utilisable en tant que non-adminstrateur.
 Répertoire .3T existant contenant l'environnement robo-3t
 
 ## Build
+```
+export UID=`id -u`
+export GID=`id -g`
 
 docker compose build
+```
 
 ## Run
+```
 docker compose up
+```
